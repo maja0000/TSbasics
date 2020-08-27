@@ -12,11 +12,16 @@ function getToDo() {
 
     .then((res) => {
       const SingleToDo = res as ToDo;
+      const id = SingleToDo.id;
       const title = SingleToDo.title;
       const completed = SingleToDo.completed;
-      console.log(title, completed);
+      logToDo(id, title, completed);
     })
     .catch((err) => console.log(err));
 }
 
 getToDo();
+
+const logToDo = (id: number, title: string, completed: boolean) => {
+  console.log(id, title, completed);
+};
