@@ -8,15 +8,19 @@ const logWeather = ({ date, weather }: { date: Date; weather: string }) => {
 };
 logWeather(todaysWeather);
 
+/////////////////////////////////////
 let person = {
   name: 'Hania',
   age: 20,
   coords: {
-    lang: '20',
-    let: '0',
+    lat: 20,
+    lng: 0,
   },
   setAge(age: number): void {
     this.age = age;
   },
 };
 const { age }: { age: number } = person;
+const {
+  coords: { lat, lng },
+}: { coords: { lat: number; lng: number } } = person;
