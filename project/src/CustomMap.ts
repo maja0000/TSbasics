@@ -1,5 +1,3 @@
-import { info } from 'console';
-
 export interface Mappable {
   location: {
     lat: number;
