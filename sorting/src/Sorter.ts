@@ -1,7 +1,11 @@
-import { NumbersCollection } from './NumbersCollection';
-
+interface Sortable {
+  // will sort whatever data type as long as passes directions :
+  length: number;
+  compare(indexLeft: number, indexRight: number): boolean;
+  swap(indexLeft: number, indexRight: number): void;
+}
 export class Sorter {
-  constructor(public collection: NumbersCollection) {}
+  constructor(public collection: Sortable) {}
 
   sort(): void {
     const { length } = this.collection;
