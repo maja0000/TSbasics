@@ -1,8 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var NumbersCollection_1 = require("./NumbersCollection");
+var StringCollection_1 = require("./StringCollection");
 var Sorter_1 = require("./Sorter");
-var numbersCollection = new NumbersCollection_1.NumbersCollection([-1, 26, 5, -666, 56]);
-var sorter = new Sorter_1.Sorter(numbersCollection);
+// numbers
+// const numbersCollection = new NumbersCollection([-1, 26, 5, -666, 56]);
+// const sorter = new Sorter(numbersCollection);
+// sorter.sort();
+// console.log(numbersCollection.data);
+// strings
+var stringCol = new StringCollection_1.StringCollection('Thats-ThE-STRINGG');
+var sorter = new Sorter_1.Sorter(stringCol);
 sorter.sort();
-console.log(numbersCollection.data);
+console.log(stringCol.data);
