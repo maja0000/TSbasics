@@ -1,6 +1,9 @@
-// sort strings
-export class StringCollection {
-  constructor(public data: string) {}
+import { Sorter } from './Sorter';
+
+export class StringCollection extends Sorter {
+  constructor(public data: string) {
+    super();
+  }
 
   get length(): number {
     return this.data.length;
